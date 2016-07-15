@@ -6,13 +6,25 @@ void swap(int *a, int *b) /* Function For Swapping */ {
 	*b ^= *a;
 	*a ^= *b;
 }
-void insertion_sort( int *a, int n ) /* Insertion Sort Begins Here */ {
+/*void insertion_sort( int *a, int n ) {
 	for(int i = 0; i < n; i++) {
 		int j = i;
 		while( j > 0 && a[j-1] > a[j]) {
 			swap(a[j-1], a[j]);
 			--j;
 		}
+	}
+}*/
+/* A Slightly faster variant*/
+void insertion_sort( int *a, int n ){
+	for(int i = 0; i < n; i++) {
+		int temp = a[i];
+		int j = i - 1;
+		while( j >= 0 && a[j] > temp) {
+			a[j+1] = a[j];
+			--j;
+		}
+		a[j+1] = temp;
 	}
 }
 
