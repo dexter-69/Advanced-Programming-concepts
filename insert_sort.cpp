@@ -1,11 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void swap(int *a, int *b) /* Function For Swapping */ {
-	*a ^= *b;
-	*b ^= *a;
-	*a ^= *b;
-}
 /*void insertion_sort( int *a, int n ) {
 	for(int i = 0; i < n; i++) {
 		int j = i;
